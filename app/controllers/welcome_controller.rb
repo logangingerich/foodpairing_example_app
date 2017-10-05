@@ -1,6 +1,4 @@
 class WelcomeController < ApplicationController
-require "foodpairing"
-
   def index
     @test = Foodpairing.get_all_ingredients
     @test2 = Foodpairing.get_ingredient_by_id(1)
