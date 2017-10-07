@@ -48,7 +48,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'bootstrap', '~> 4.0.0.beta'
 gem "figaro"
 gem "react-rails"
 gem 'httparty', '~> 0.13'

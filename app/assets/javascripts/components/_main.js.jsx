@@ -1,17 +1,31 @@
 var Main = React.createClass({
   getInitialState: function() {
-    return { showResults: false };
+    return { showResults: false,
+    };
   },
-  onClick: function() {
-    let resultsState = !this.state.showResults;
-    this.setState({ showResults: resultsState });
+  onClickWhiskey: function() {
+    let resultsState = true;
+    this.setState({ showResults: resultsState,
+                    pairings: this.props.whiskey_pairings
+
+     });
+  },
+  onClickOther: function() {
+    let resultsState = true;
+    this.setState({ showResults: resultsState,
+                    pairings: 'hi'
+     });
   },
   render() {
-    const title = this.props.title
     return(
       <div>
-        <h1 onClick={this.onClick}>React Test: </h1>
-        <h1>{ this.state.showResults ? title : '' }</h1>
+        <div className="button-container">
+          <button type="button" className="btn btn-primary ind-btn" onClick={this.onClickWhiskey}>Bourbon Whiskey</button>
+          <button type="button" className="btn btn-primary ind-btn" onClick={this.onClickOther}>Other</button>
+        </div>
+        <div className="results">
+          <h1>{ this.state.showResults ? this.state.pairings : 'Click an Ingredient' }</h1>
+        </div>
       </div>
     )
   }
