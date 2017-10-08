@@ -4,6 +4,7 @@
 .button-container {
   text-align: center;
   padding-top: 20px;
+  font-family: 'Lato', sans-serif;
 }
 
 .ind-btn {
@@ -12,4 +13,17 @@
 
 .results {
   text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#jumbo {
+  text-align: center;
+  font-size: 200%;
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(60, 60, 60);
+  color: white;
+  margin-bottom: 0;
 }
