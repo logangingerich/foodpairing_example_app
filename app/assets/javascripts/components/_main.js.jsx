@@ -4,37 +4,36 @@ var Main = React.createClass({
     };
   },
   onClickWhiskey: function() {
-    let resultsState = true;
-    this.setState({ showResults: resultsState,
+    this.setState({ showResults: true,
                     pairings: this.props.whiskey_pairings,
                     name: 'Bourbon Whiskey'
 
      });
   },
   onClick2: function() {
-    let resultsState = true;
-    this.setState({ showResults: resultsState,
+    this.setState({ showResults: true,
                     pairings: this.props.pairings_2,
                     name: 'Apple'
      });
   },
   onClick3: function() {
-    let resultsState = true;
-    this.setState({ showResults: resultsState,
+    this.setState({ showResults: true,
                     pairings: this.props.pairings_3,
                     name: 'Smoked Atlantic Salmon'
      });
   },
   onClick4: function() {
-    let resultsState = true;
-    this.setState({ showResults: resultsState,
+    this.setState({ showResults: true,
                     pairings: this.props.pairings_4,
                     name: 'Asparagus'
      });
   },
-  onClick5: function() {
-    let resultsState = true;
-    this.setState({ showResults: resultsState,
+  onClick5: function(id) {
+  @ingredient_by_id = Foodpairing.get_ingredient_by_id(1)
+
+  @pairings_array_3 = Foodpairing.get_pairings_for_ingredient(id)
+  @pairings_3 = @pairings_array_3.join("  -  ")
+    this.setState({ showResults: true,
                     pairings: this.props.pairings_5,
                     name: 'Artichoke'
      });
@@ -43,6 +42,7 @@ var Main = React.createClass({
     return(
       <div>
         <div className="button-container">
+          <button type="button" className="btn btn-primary ind-btn" onClick={this.onClick('94')}>Bourbon Whiskey</button>
           <button type="button" className="btn btn-primary ind-btn" onClick={this.onClickWhiskey}>Bourbon Whiskey</button>
           <button type="button" className="btn btn-primary ind-btn" onClick={this.onClick2}>Apple</button>
           <button type="button" className="btn btn-primary ind-btn" onClick={this.onClick3}>Smoked Atlantic Salmon</button>

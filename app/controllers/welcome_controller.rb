@@ -35,5 +35,9 @@ class WelcomeController < ApplicationController
     #get_brand_by_id takes in a brand id and returns on object containing
     #information on the corresponding brand
     @brand_by_id = Foodpairing.get_brand_by_id(114)
+    render json: {
+      name: @ingrediant.name,
+      pairings: pairings_array
+    }
   end
 end
