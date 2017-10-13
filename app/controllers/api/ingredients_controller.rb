@@ -1,4 +1,4 @@
-class IngredientController < ApplicationController
+class Api::IngredientsController < ApiController
   # def show
   #   #get_all_ingredient returns an object containing all ingredients with
   #   #descriptions
@@ -40,18 +40,16 @@ class IngredientController < ApplicationController
   #     pairings: pairings_array
   #   }
   # end
-  def show
+  def index
 
-    @ingredient = Foodpairing.search_ingredients_by_name(params[:query]).first
-    # @ingredient = Foodpairing.get_ingredient_by_id(params[:id])
+    data = Foodpairing.search_ingredients_by_name(params[:query]).first
 
-    #get_pairings_for_ingredient takes in an ingredient id and returns an
-    # ARRAY of ingredients that would pair well.
-    @pairings_array = Foodpairing.get_pairings_for_ingredient(@ingredient.id])
+    # pairings_array = Foodpairing.get_pairings_for_ingredient(data["ingredient"]["id"])
 
     render json: {
-      name: @ingredient.name,
-      pairings: @pairings_array
+      ingredient: data['ingredient']
+
+      # pairings: pairings_array
     }
   end
 end
