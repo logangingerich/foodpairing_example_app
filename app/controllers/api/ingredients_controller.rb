@@ -41,15 +41,13 @@ class Api::IngredientsController < ApiController
   #   }
   # end
   def index
+    ingredient = Foodpairing.search_ingredients_by_name(params[:query]).first
 
-    data = Foodpairing.search_ingredients_by_name(params[:query]).first
-
-    # pairings_array = Foodpairing.get_pairings_for_ingredient(data["ingredient"]["id"])
+    pairings_array = Foodpairing.get_pairings_for_ingredient(ingredient['id'])
 
     render json: {
-      ingredient: data['ingredient']
-
-      # pairings: pairings_array
+      ingredient: ingredient['name'],
+      pairings: pairings_array
     }
   end
 end

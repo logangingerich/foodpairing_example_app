@@ -1,5 +1,5 @@
 PATH
-  remote: /Users/macuser/foodpairing
+  remote: ../foodpairing
   specs:
     foodpairing (0.0.1)
       httparty (~> 0.13)
@@ -221,4 +221,4 @@ DEPENDENCIES
   webpack-rails
 
 BUNDLED WITH
-   1.13.6
+   1.15.4
