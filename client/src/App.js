@@ -15,10 +15,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className='App'>
+      <div className="container">
+        <div id="header">
+          <h1>Foodpairing</h1>
+          <p>A Test App for the Foodpairing Ruby Gem</p>
+        </div>
         <div className='ui text container'>
-          <MainNav favoriteColor='Click Button to Find out' />
-          <h2>Welcome</h2>
+          <MainNav />
         </div>
       </div>
     );

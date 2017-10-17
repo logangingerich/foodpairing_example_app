@@ -36,7 +36,7 @@ gem "figaro"
 gem "react-rails"
 gem 'httparty', '~> 0.13'
 gem 'json', '~> 1.8', '>= 1.8.3'
-gem 'foodpairing', path: "~/Development/Bloc/logan/foodpairing"
+gem 'foodpairing', path: "/Users/macuser/foodpairing"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

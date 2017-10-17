@@ -1,13 +1,49 @@
-body {
+.App {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  height: 100%;
+  text-align: center;
 }
 
-.App {
-  margin-top: 7em;
+.button-container {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 20px;
 }
 
-#food-search {
-  margin-top: 5em;
+.btn {
+  color: black;
+}
+
+#ind-btn-1 {
+  margin-bottom: 20px;
+}
+#ind-btn-2 {
+  margin-bottom: 20px;
+}
+
+.results {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  width: 100%;
+}
+
+.container {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  background-color: rgb(60, 60, 60);
+  color: white;
+  padding-bottom: 40%;
+}
+
+#header {
+  background-color: rgb(175, 71, 60);
+  padding-bottom: 30px;
+  padding-top: 25px;
+  font-size: 150%;
+}
+
+div.ui.text.container {
+  padding-top: 40px;
 }
