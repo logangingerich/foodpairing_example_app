@@ -1,24 +1,5 @@
-# README
+# Foodpairing App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example application utilizing the [Foodpairing Ruby Gem](https://github.com/logangingerich/foodpairing). The Foodpairing Gem is a Ruby wrapper for the Foodpairing API.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+For more information on the Foodpairing API itself, visit the [Foodpairing Site](http://developer.foodpairing.com/) and their [Apiary site for documetation](http://docs.foodpairingpublicapi.apiary.io/).
