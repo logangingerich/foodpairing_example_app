@@ -56,7 +56,7 @@ class MainNav extends React.Component {
           <div className="results">
             <h1>Ingredient:</h1>
               <h3>{ this.state.ingredient }</h3>
-            <h1>Pairings For ingredient:</h1>
+            <h1>Pairings For Ingredient:</h1>
               <h3>{ this.state.pairings }</h3>
             <h1>All Ingredients:</h1>
               <h3>{ this.state.all_ingredients }</h3>

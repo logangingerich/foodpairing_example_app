@@ -10,7 +10,11 @@ class Api::IngredientsController < ApiController
 
     #get_all_ingredient returns an object containing all ingredients with
     #descriptions
-    #all_ingredients = Foodpairing.get_all_ingredients
+    all_ingredients_array = []
+    all_ingredients = Foodpairing.get_all_ingredients
+    all_ingredients.each do |ing|
+      all_ingredients_array.push(ing["name"])
+    end
 
     #get_ingredient_by_id returns an object containing the corresponding
     #ingredient along with a description
@@ -19,7 +23,7 @@ class Api::IngredientsController < ApiController
     render json: {
       ingredient: ingredient["name"],
       pairings: pairings_array,
-      all_ingredients: pairings_array
+      all_ingredients: all_ingredients_array
     }
   end
 end
