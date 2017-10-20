@@ -8,13 +8,13 @@ class Api::IngredientsController < ApiController
     #get_pairings_for_ingredient takes in an ingredient id and returns an
     #ARRAY of ingredients that would pair well.
 
-    #get_all_ingredient returns an object containing all ingredients with
-    #descriptions
     all_ingredients_array = []
     all_ingredients = Foodpairing.get_all_ingredients
     all_ingredients.each do |ing|
       all_ingredients_array.push(ing["name"])
     end
+    #get_all_ingredient returns an object containing all ingredients with
+    #descriptions
 
     #get_ingredient_by_id returns an object containing the corresponding
     #ingredient along with a description

@@ -12,16 +12,11 @@ class MainNav extends React.Component {
       all_brands: this.props.all_brands
     };
 
-    this.componentDidMount = this.componentDidMount.bind(this);
     this.getIngredientData = this.getIngredientData.bind(this);
     this.getBrandData = this.getBrandData.bind(this);
   }
 
-  componentDidMount() {}
-
   getIngredientData = (name) => (ev) =>  {
-    console.log(name)
-
     $.getJSON('/api/ingredients?query=' + name)
       .then((results) => {
         this.setState({
@@ -33,8 +28,6 @@ class MainNav extends React.Component {
   }
 
   getBrandData = (id) => (ev) =>  {
-    console.log(id)
-
     $.getJSON('/api/brands?query=' + id)
       .then((results) => {
         this.setState({
