@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     resources :brands
   end
 
-  #get "*path" => redirect("/?goto=%{path}")
+  get "*path" => redirect("/?goto=%{path}")
 end
